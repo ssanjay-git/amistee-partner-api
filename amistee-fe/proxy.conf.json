@@ -1,0 +1,7 @@
+{
+    "/dev/*": {
+        "target": "https://12lvwmmdt3.execute-api.us-east-1.amazonaws.com",
+        "secure": true,
+        "changeOrigin": true
+    }
+}
