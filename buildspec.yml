@@ -31,6 +31,6 @@ phases:
       - echo Build stage successfully completed on `date`
       - echo Pushing the Docker image...
       - docker push $IMAGE_URI
-      - printf '[{"name":"AngularApp","imageUri":"%s"}]' "$IMAGE_URI" > images.json
+      - printf '[{"name":"AngularApp","imageUri":"%s"}]' "$IMAGE_URI" > imagedefinitions.json
 artifacts:
-  files: images.json
+  files: imagedefinitions.json
