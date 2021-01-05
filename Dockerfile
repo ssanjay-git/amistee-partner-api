@@ -4,6 +4,6 @@ COPY amistee-fe/ ./my-app/
 RUN cd my-app && npm install @angular/cli && npm install && npm run build
 
 FROM nginx:1.13.9-alpine
-COPY /usr/src/app/my-app/ /usr/share/nginx/html
+COPY /usr/src/app/my-app/dist /usr/share/nginx/html
 #Copy default nginx configuration
-COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
+COPY /usr/src/app/my-app/nginx-custom.conf /etc/nginx/conf.d/default.conf
